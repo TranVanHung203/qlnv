@@ -4,14 +4,25 @@
 FROM mcr.microsoft.com/dotnet/sdk:9.0 AS build
 WORKDIR /src
 
-# copy csproj và restore
-COPY *.sln .
-COPY qlnv/*.csproj ./qlnv/
-RUN dotnet restore
+# copy solution
+COPY qlnv.sln ./
 
-# copy toàn bộ code và build
+# copy từng project .csproj
+COPY Contracts/Contracts.csproj Contracts/
+COPY Service.Contracts/Service.Contracts.csproj Service.Contracts/
+COPY qlnv.Presentation/qlnv.Presentation.csproj qlnv.Presentation/
+COPY Service/Service.csproj Service/
+COPY Repository/Repository.csproj Repository/
+COPY Entities/Entities.csproj Entities/
+
+# restore dependencies
+RUN dotnet restore qlnv.sln
+
+# copy toàn bộ source code
 COPY . .
-WORKDIR /src/qlnv
+
+# publish web project
+WORKDIR /src/qlnv.Presentation
 RUN dotnet publish -c Release -o /app/out
 
 # =========================
@@ -21,4 +32,4 @@ FROM mcr.microsoft.com/dotnet/aspnet:9.0 AS runtime
 WORKDIR /app
 COPY --from=build /app/out ./
 
-ENTRYPOINT ["dotnet", "qlnv.dll"]
+ENTRYPOINT ["dotnet", "qlnv.Presentation.dll"]

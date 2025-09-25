@@ -22,9 +22,9 @@ RUN dotnet restore qlnv.sln
 # copy toàn bộ source code
 COPY . .
 
-# publish web project
+# publish web project (self-contained)
 WORKDIR /src/qlnv.Presentation
-RUN dotnet publish -c Release -o /app/out
+RUN dotnet publish qlnv.Presentation.csproj -c Release -o /app/out --no-restore --self-contained false
 
 # =========================
 # Stage 2: Runtime

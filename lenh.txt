@@ -1,0 +1,22 @@
+dotnet ef migrations add Init -p Repository -s qlnv
+dotnet ef database update -p Repository -s qlnv
+
+---------------------------
+dotnet add package Microsoft.AspNetCore.Identity.EntityFrameworkCore
+dotnet add package System.IdentityModel.Tokens.Jwt
+dotnet add package Microsoft.AspNetCore.Mvc.Core
+dotnet add package BCrypt.Net-Next
+dotnet add package Pomelo.EntityFrameworkCore.MySql
+
+
+-------------------
+dotnet add reference ../Entities/Entities.csproj
+dotnet add reference ../Service.Contracts/Service.Contracts.csproj
+dotnet add reference ../Contracts/Contracts.csproj
+dotnet add reference ../Repository/Repository.csproj
+dotnet add reference ../Service/Service.csproj
+-------------------------
+
+Màn hình chỉnh sửa mặc định:
+Khi mở trang “Cấu hình thông báo” mặc định gọi GET /api/CauHinhThongBao/active để load bản đang dùng.
+Có nút “Xem lịch sử” hoặc dropdown “Chọn cấu hình” gọi GET /api/CauHinhThongBao để hiển thị danh sách (Id, SoNgayThongBao, DanhSachNamThongBao, IsActive) — user có thể chọn 1 dòng để edit.

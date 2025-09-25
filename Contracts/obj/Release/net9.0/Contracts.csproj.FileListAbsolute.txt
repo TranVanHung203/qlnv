@@ -1,0 +1,15 @@
+F:\ATPro\.Net Web\qlnv\Contracts\bin\Release\net9.0\Contracts.deps.json
+F:\ATPro\.Net Web\qlnv\Contracts\bin\Release\net9.0\Contracts.dll
+F:\ATPro\.Net Web\qlnv\Contracts\bin\Release\net9.0\Contracts.pdb
+F:\ATPro\.Net Web\qlnv\Contracts\bin\Release\net9.0\Entities.dll
+F:\ATPro\.Net Web\qlnv\Contracts\bin\Release\net9.0\Entities.pdb
+F:\ATPro\.Net Web\qlnv\Contracts\obj\Release\net9.0\Contracts.csproj.AssemblyReference.cache
+F:\ATPro\.Net Web\qlnv\Contracts\obj\Release\net9.0\Contracts.GeneratedMSBuildEditorConfig.editorconfig
+F:\ATPro\.Net Web\qlnv\Contracts\obj\Release\net9.0\Contracts.AssemblyInfoInputs.cache
+F:\ATPro\.Net Web\qlnv\Contracts\obj\Release\net9.0\Contracts.AssemblyInfo.cs
+F:\ATPro\.Net Web\qlnv\Contracts\obj\Release\net9.0\Contracts.csproj.CoreCompileInputs.cache
+F:\ATPro\.Net Web\qlnv\Contracts\obj\Release\net9.0\Contracts.csproj.Up2Date
+F:\ATPro\.Net Web\qlnv\Contracts\obj\Release\net9.0\Contracts.dll
+F:\ATPro\.Net Web\qlnv\Contracts\obj\Release\net9.0\refint\Contracts.dll
+F:\ATPro\.Net Web\qlnv\Contracts\obj\Release\net9.0\Contracts.pdb
+F:\ATPro\.Net Web\qlnv\Contracts\obj\Release\net9.0\ref\Contracts.dll

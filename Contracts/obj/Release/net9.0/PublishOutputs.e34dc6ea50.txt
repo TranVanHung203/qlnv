@@ -1,0 +1,5 @@
+F:\ATPro\.Net Web\qlnv\out\Contracts.dll
+F:\ATPro\.Net Web\qlnv\out\Contracts.deps.json
+F:\ATPro\.Net Web\qlnv\out\Contracts.pdb
+F:\ATPro\.Net Web\qlnv\out\Entities.dll
+F:\ATPro\.Net Web\qlnv\out\Entities.pdb

@@ -1,0 +1,17 @@
+F:\ATPro\.Net Web\qlnv\Repository\bin\Release\net9.0\Repository.deps.json
+F:\ATPro\.Net Web\qlnv\Repository\bin\Release\net9.0\Repository.dll
+F:\ATPro\.Net Web\qlnv\Repository\bin\Release\net9.0\Repository.pdb
+F:\ATPro\.Net Web\qlnv\Repository\bin\Release\net9.0\Contracts.dll
+F:\ATPro\.Net Web\qlnv\Repository\bin\Release\net9.0\Entities.dll
+F:\ATPro\.Net Web\qlnv\Repository\bin\Release\net9.0\Entities.pdb
+F:\ATPro\.Net Web\qlnv\Repository\bin\Release\net9.0\Contracts.pdb
+F:\ATPro\.Net Web\qlnv\Repository\obj\Release\net9.0\Repository.csproj.AssemblyReference.cache
+F:\ATPro\.Net Web\qlnv\Repository\obj\Release\net9.0\Repository.GeneratedMSBuildEditorConfig.editorconfig
+F:\ATPro\.Net Web\qlnv\Repository\obj\Release\net9.0\Repository.AssemblyInfoInputs.cache
+F:\ATPro\.Net Web\qlnv\Repository\obj\Release\net9.0\Repository.AssemblyInfo.cs
+F:\ATPro\.Net Web\qlnv\Repository\obj\Release\net9.0\Repository.csproj.CoreCompileInputs.cache
+F:\ATPro\.Net Web\qlnv\Repository\obj\Release\net9.0\Repository.csproj.Up2Date
+F:\ATPro\.Net Web\qlnv\Repository\obj\Release\net9.0\Repository.dll
+F:\ATPro\.Net Web\qlnv\Repository\obj\Release\net9.0\refint\Repository.dll
+F:\ATPro\.Net Web\qlnv\Repository\obj\Release\net9.0\Repository.pdb
+F:\ATPro\.Net Web\qlnv\Repository\obj\Release\net9.0\ref\Repository.dll

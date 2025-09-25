@@ -1,0 +1,3 @@
+F:\ATPro\.Net Web\qlnv\out\Entities.dll
+F:\ATPro\.Net Web\qlnv\out\Entities.deps.json
+F:\ATPro\.Net Web\qlnv\out\Entities.pdb

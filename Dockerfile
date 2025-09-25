@@ -14,6 +14,7 @@ COPY qlnv.Presentation/qlnv.Presentation.csproj qlnv.Presentation/
 COPY Service/Service.csproj Service/
 COPY Repository/Repository.csproj Repository/
 COPY Entities/Entities.csproj Entities/
+COPY qlnv/qlnv.csproj qlnv/
 
 # restore dependencies
 RUN dotnet restore qlnv.sln

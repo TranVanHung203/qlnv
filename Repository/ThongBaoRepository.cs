@@ -23,10 +23,12 @@ namespace Repository
             return await _context.ThongBaos.AnyAsync(t => t.NhanVienId == nhanVienId && t.NgayGui.Date == d);
         }
 
-        public async Task<bool> ExistsForNhanVienWithReasonAsync(int nhanVienId, string reason)
+        public async Task<bool> ExistsForNhanVienWithReasonAsync(int nhanVienId, string reason, string emailNhan)
         {
             if (string.IsNullOrWhiteSpace(reason)) return false;
-            return await _context.ThongBaos.AnyAsync(t => t.NhanVienId == nhanVienId && t.LyDo == reason);
+            if (string.IsNullOrWhiteSpace(emailNhan)) return false;
+            var email = emailNhan.Trim().ToLower();
+            return await _context.ThongBaos.AnyAsync(t => t.NhanVienId == nhanVienId && t.LyDo == reason && t.EmailNhan.ToLower() == email);
         }
 
         public async Task<PagedResult<ThongBao>> GetPagedAsync(int page, int pageSize, int? nhanVienId = null, string? emailNhan = null, DateTime? from = null, DateTime? to = null)

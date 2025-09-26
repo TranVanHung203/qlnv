@@ -141,9 +141,9 @@ namespace Service
                 {
                     if (string.IsNullOrWhiteSpace(nv.Email)) continue;
 
-                    // Avoid sending if already sent today
-                    var alreadySent = await _thongBaoRepo.ExistsForNhanVienOnDateAsync(nv.Id, utcNow);
-                    if (alreadySent) continue;
+                    //// Avoid sending if already sent today
+                    //var alreadySent = await _thongBaoRepo.ExistsForNhanVienOnDateAsync(nv.Id, utcNow);
+                    //if (alreadySent) continue;
 
                     var join = nv.NgayVaoLam.Date;
 
@@ -158,22 +158,24 @@ namespace Service
 
                     // Check anniversary years
                     bool anniversaryHandled = false;
+                    var reasons = new List<string>();
+
                     foreach (var y in years)
                     {
                         var anniversaryDate = join.AddYears(y);
                         if (utcNow >= anniversaryDate)
                         {
-                            var reason = $"Kỷ niệm {y} năm làm việc";
-                            // avoid duplicate sends by reason
-                            var alreadySentForReason = await _thongBaoRepo.ExistsForNhanVienWithReasonAsync(nv.Id, reason);
-                            if (!alreadySentForReason)
-                            {
-                                toNotify.Add((nv.Id, nv.Email, reason));
-                            }
-                            anniversaryHandled = true;
-                            break;
+                            reasons.Add($"Kỷ niệm {y} năm làm việc");
                         }
                     }
+
+                    foreach (var reason in reasons)
+                    {
+                        toNotify.Add((nv.Id, nv.Email, reason));
+                        anniversaryHandled = true;
+                    }
+
+
                     if (anniversaryHandled) continue;
 
                     // Probation logic: measure working days (exclude Saturdays and holidays)
@@ -181,11 +183,8 @@ namespace Service
                     if (workingDays >= soNgay)
                     {
                         var reason = $"Đã đủ {soNgay} ngày làm việc (thử việc)";
-                        var alreadySentForReason = await _thongBaoRepo.ExistsForNhanVienWithReasonAsync(nv.Id, reason);
-                        if (!alreadySentForReason)
-                        {
-                            toNotify.Add((nv.Id, nv.Email, reason));
-                        }
+                        // Tentatively add; final duplicate suppression will be done per recipient when sending
+                        toNotify.Add((nv.Id, nv.Email, reason));
                     }
                 }
                 catch
@@ -259,9 +258,23 @@ namespace Service
             {
                 try
                 {
+                    // For each recipient, ensure we don't duplicate sends for the same employee/reason/email
+                    var itemsForThisRecipient = new List<(int NhanVienId, string Email, string Reason)>();
+                    foreach (var item in toNotify)
+                    {
+                        var alreadySentForRecipient = await _thongBaoRepo.ExistsForNhanVienWithReasonAsync(item.NhanVienId, item.Reason, to);
+                        if (!alreadySentForRecipient)
+                        {
+                            itemsForThisRecipient.Add(item);
+                        }
+                    }
+
+                    if (!itemsForThisRecipient.Any()) continue;
+
+                    // Build per-recipient HTML/body (we reuse same htmlBody/excel for simplicity)
                     await _emailSender.SendEmailAsync(to, subject, htmlBody, attachments);
 
-                    foreach (var item in toNotify)
+                    foreach (var item in itemsForThisRecipient)
                     {
                         await _thongBaoRepo.CreateAsync(new ThongBao
                         {

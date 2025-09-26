@@ -20,3 +20,4 @@ F:\ATPro\.Net Web\qlnv-main\qlnv-main\Entities\obj\Debug\net9.0\Entities.dll
 F:\ATPro\.Net Web\qlnv-main\qlnv-main\Entities\obj\Debug\net9.0\refint\Entities.dll
 F:\ATPro\.Net Web\qlnv-main\qlnv-main\Entities\obj\Debug\net9.0\Entities.pdb
 F:\ATPro\.Net Web\qlnv-main\qlnv-main\Entities\obj\Debug\net9.0\ref\Entities.dll
+F:\ATPro\.Net Web\qlnv\Entities\obj\Debug\net9.0\Entities.sourcelink.json

@@ -19,3 +19,4 @@ F:\ATPro\.Net Web\qlnv\Service\obj\Release\net9.0\Service.dll
 F:\ATPro\.Net Web\qlnv\Service\obj\Release\net9.0\refint\Service.dll
 F:\ATPro\.Net Web\qlnv\Service\obj\Release\net9.0\Service.pdb
 F:\ATPro\.Net Web\qlnv\Service\obj\Release\net9.0\ref\Service.dll
+F:\ATPro\.Net Web\qlnv\Service\obj\Release\net9.0\Service.sourcelink.json

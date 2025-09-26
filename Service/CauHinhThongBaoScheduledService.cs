@@ -26,18 +26,18 @@ namespace Service
             {
                 try
                 {
-                    var now = DateTime.Now;
-                    var next = new DateTime(now.Year, now.Month, now.Day, 10, 30, 0);
-                    if (now > next) next = next.AddDays(1);
+                    // var now = DateTime.Now;
+                    // var next = new DateTime(now.Year, now.Month, now.Day, 8, 0, 0);
+                    // if (now > next) next = next.AddDays(1);
 
-                    var delay = next - now;
-                    _logger.LogInformation("CauHinhThongBaoScheduledService sleeping until {NextRun} (in {Delay})", next, delay);
+                    // var delay = next - now;
+                    // _logger.LogInformation("CauHinhThongBaoScheduledService sleeping until {NextRun} (in {Delay})", next, delay);
 
-                    await Task.Delay(delay, stoppingToken);
-                    //------------------------------------
-                    // var delay = TimeSpan.FromMinutes(1);
-                    // _logger.LogInformation("CauHinhThongBaoScheduledService sleeping for {Delay}", delay);
                     // await Task.Delay(delay, stoppingToken);
+                    //------------------------------------
+                    var delay = TimeSpan.FromMinutes(1);
+                    _logger.LogInformation("CauHinhThongBaoScheduledService sleeping for {Delay}", delay);
+                    await Task.Delay(delay, stoppingToken);
 
                     if (stoppingToken.IsCancellationRequested) break;
 

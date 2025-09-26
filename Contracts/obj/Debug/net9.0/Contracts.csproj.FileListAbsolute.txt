@@ -28,3 +28,4 @@ F:\ATPro\.Net Web\qlnv-main\qlnv-main\Contracts\obj\Debug\net9.0\Contracts.dll
 F:\ATPro\.Net Web\qlnv-main\qlnv-main\Contracts\obj\Debug\net9.0\refint\Contracts.dll
 F:\ATPro\.Net Web\qlnv-main\qlnv-main\Contracts\obj\Debug\net9.0\Contracts.pdb
 F:\ATPro\.Net Web\qlnv-main\qlnv-main\Contracts\obj\Debug\net9.0\ref\Contracts.dll
+F:\ATPro\.Net Web\qlnv\Contracts\obj\Debug\net9.0\Contracts.sourcelink.json

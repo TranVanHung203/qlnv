@@ -40,7 +40,7 @@ builder.Services.AddScoped<Service.Contracts.ICauHinhThongBaoService, Service.Ca
 builder.Services.AddScoped<Service.Contracts.IThongBaoService, Service.ThongBaoService>();
 // Register scheduled hosted service to run notifications daily at 08:00 local time
 builder.Services.AddHostedService<Service.CauHinhThongBaoScheduledService>();
-// Provide access to HttpContext for background services when necessary
+//Provide access to HttpContext for background services when necessary
 builder.Services.AddHttpContextAccessor();
 // Hosted background job removed: notifications will be triggered manually via controller
 // 🔹 JWT
@@ -150,10 +150,10 @@ builder.Services.AddCors(options =>
     options.AddPolicy("AllowAngularClient",
         policy =>
         {
-            policy.WithOrigins("http://localhost:4200") // origin FE Angular
+            policy.WithOrigins("http://192.168.1.140:8080")
                   .AllowAnyHeader()
-                  .AllowAnyMethod()
-                  .AllowCredentials(); // nếu bạn dùng cookie/token
+                  .AllowAnyMethod();
+
         });
 });
 
@@ -163,8 +163,11 @@ var app = builder.Build();
 app.UseGlobalExceptionHandler();
 
 app.UseCors("AllowAngularClient");
-app.UseSwagger();
-app.UseSwaggerUI();
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI();
+}
 
 app.UseHttpsRedirection();
 app.UseAuthentication(); // phải trước UseAuthorization

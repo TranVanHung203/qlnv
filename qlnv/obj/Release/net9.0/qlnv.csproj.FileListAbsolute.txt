@@ -164,3 +164,5 @@ F:\ATPro\.Net Web\qlnv\qlnv\obj\Release\net9.0\refint\qlnv.dll
 F:\ATPro\.Net Web\qlnv\qlnv\obj\Release\net9.0\qlnv.pdb
 F:\ATPro\.Net Web\qlnv\qlnv\obj\Release\net9.0\qlnv.genruntimeconfig.cache
 F:\ATPro\.Net Web\qlnv\qlnv\obj\Release\net9.0\ref\qlnv.dll
+F:\ATPro\.Net Web\qlnv\qlnv\obj\Release\net9.0\qlnv.sourcelink.json
+F:\ATPro\.Net Web\qlnv\qlnv\obj\Release\net9.0\staticwebassets.upToDateCheck.txt

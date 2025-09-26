@@ -7,7 +7,7 @@ namespace Contracts
     {
         Task<ThongBao> CreateAsync(ThongBao tb);
         Task<bool> ExistsForNhanVienOnDateAsync(int nhanVienId, DateTime dateUtc);
-        Task<bool> ExistsForNhanVienWithReasonAsync(int nhanVienId, string reason);
+    Task<bool> ExistsForNhanVienWithReasonAsync(int nhanVienId, string reason, string emailNhan);
         Task<PagedResult<ThongBao>> GetPagedAsync(int page, int pageSize, int? nhanVienId = null, string? emailNhan = null, DateTime? from = null, DateTime? to = null);
     }
 }

@@ -32,3 +32,4 @@ F:\ATPro\.Net Web\qlnv-main\qlnv-main\Repository\obj\Debug\net9.0\Repository.dll
 F:\ATPro\.Net Web\qlnv-main\qlnv-main\Repository\obj\Debug\net9.0\refint\Repository.dll
 F:\ATPro\.Net Web\qlnv-main\qlnv-main\Repository\obj\Debug\net9.0\Repository.pdb
 F:\ATPro\.Net Web\qlnv-main\qlnv-main\Repository\obj\Debug\net9.0\ref\Repository.dll
+F:\ATPro\.Net Web\qlnv\Repository\obj\Debug\net9.0\Repository.sourcelink.json

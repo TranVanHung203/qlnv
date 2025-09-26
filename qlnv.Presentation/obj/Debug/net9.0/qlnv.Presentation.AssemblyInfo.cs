@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("qlnv.Presentation")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9f9732d7c5f0b5fe5acdebff31fa91a46b1c3c94")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bf0a4066f8673afc0f09c4c9d29295a17bc40498")]
 [assembly: System.Reflection.AssemblyProductAttribute("qlnv.Presentation")]
 [assembly: System.Reflection.AssemblyTitleAttribute("qlnv.Presentation")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
